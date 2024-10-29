@@ -1,0 +1,30 @@
+[init]
+    defaultBranch = master
+
+[user]
+    email = emneo@kreog.com
+    name = emneo
+    signingkey = 5FD0400D0E78EAF9843148808EBFC4B924C62D20
+
+[commit]
+    gpgsign = true
+    verbose = yes
+
+[alias]
+    logs = log --show-signature
+    fuckit = reset --hard
+    plog = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --stat
+    slog = log --oneline --decorate --graph --all
+    fpush = push --force-with-lease
+
+[push]
+    autoSetupRemote = true
+
+[sendemail]
+    smtpserver = mail.kanker.dev
+    smtpuser = emneo@kreog.com
+    smtpencryption = ssl
+    smtpserverport = 465
+
+[credential]
+    helper = cache --timeout 3600
