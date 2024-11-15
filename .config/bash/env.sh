@@ -5,7 +5,7 @@
 PS1="\[\033[01;32m\]\u@\H\[\033[01;34m\] \w \$\[\033[00m\] "
 
 # Make go brrrrrrrr (You definetely want to change this if your pc doesn't have 16 cores and 32GB of RAM)
-MAKEFLAGS="-j$(nproc --ignore=2)"
+# MAKEFLAGS="-j$(nproc --ignore=2)"
 export MAKEFLAGS
 
 # gpg signing in terminal without a secrets manager
