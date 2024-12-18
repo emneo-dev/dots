@@ -3,7 +3,7 @@
 
 [user]
     email = emneo@kreog.com
-    name = emneo
+    name = Emily Flion
     signingkey = 5FD0400D0E78EAF9843148808EBFC4B924C62D20
 
 [commit]
@@ -28,8 +28,9 @@
 
 [credential]
     helper = cache --timeout 3600
+
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
