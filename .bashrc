@@ -1,0 +1,1 @@
+/home/emneo/.config/bash/bashrc
