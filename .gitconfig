@@ -2,7 +2,7 @@
     ui = auto
 
 [branch]
-    sort = -commiterdate
+    sort = -committerdate
 
 [tag]
     sort = version:refname
