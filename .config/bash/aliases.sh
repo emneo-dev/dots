@@ -20,3 +20,5 @@ alias rrc='. $HOME/.bashrc'
 alias feh='feh --scale-down'
 
 alias tmp='pushd `mktemp -d`'
+
+alias todo='vim ~/todo.txt'
