@@ -59,7 +59,7 @@
     m = merge --signoff --no-ff
 
 [sendemail]
-    smtpserver = mail.kanker.dev
+    smtpserver = mail.s10e.net
     smtpuser = emneo@kreog.com
     smtpencryption = ssl
     smtpserverport = 465
