@@ -1,0 +1,83 @@
+{
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+
+    pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs =
+    { nixpkgs
+    , nixos-hardware
+    , pre-commit-hooks
+    , home-manager
+    , zen-browser
+    , ...
+    }:
+    let
+      system = "x86_64-linux";
+      username = "emneo";
+
+      pkgs-settings = {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
+      pkgs = (import nixpkgs pkgs-settings);
+
+      mod-hardware = with nixos-hardware.nixosModules; [
+        framework-desktop-amd-ai-max-300-series
+      ];
+
+      home-manager-conf = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        users.${username} = import ./home;
+        extraSpecialArgs = {
+          inherit username system zen-browser;
+        };
+      };
+    in
+    rec {
+      formatter.${system} = pkgs.nixpkgs-fmt;
+      nixosConfigurations = {
+        tachyon = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./configuration.nix
+            ./hardware-configuration.nix
+            home-manager.nixosModules.home-manager
+            { home-manager = home-manager-conf; }
+          ] ++ mod-hardware;
+        };
+      };
+      checks.${system}.pre-commit-check = pre-commit-hooks.lib.${system}.run {
+        src = ./.;
+        hooks = {
+          nixpkgs-fmt = {
+            enable = true;
+            name = pkgs.lib.mkForce "Nix files format";
+          };
+        };
+      };
+      devShells.${system}.default = pkgs.mkShell {
+        inherit (checks.${system}.pre-commit-check) shellHook;
+      };
+    };
+
+}

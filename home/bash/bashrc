@@ -1,20 +1,6 @@
 # .bashrc
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-set +o history
-
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100 # limits recursive functions, see 'man bash'
-
-BASH_CONFIG=$HOME/.config/bash
-
-. "$BASH_CONFIG"/aliases.sh
-. "$BASH_CONFIG"/env.sh
-. "$BASH_CONFIG"/path.sh
-. "$BASH_CONFIG"/epitech.sh
-
-fortune
 
 # Bash options
 shopt -s histappend
@@ -30,5 +16,3 @@ function mayhem() {
 function rmayhem() {
     sed -i "s/;/;/g" "$@"
 }
-
-set -o history
