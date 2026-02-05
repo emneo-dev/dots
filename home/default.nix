@@ -21,27 +21,28 @@
     packages = with pkgs; [
       onefetch
       ncdu
-      tldr
+      tldr # Move
       tokei
-      ripgrep
-      rclone
+      ripgrep # Move?
+      rclone # Move?
       file
       zip
       unzip
       ffmpeg
-      ghostty
+      ghostty # Move
       zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-      gnupg
-      vesktop
+      gnupg # Move
+      vesktop # Move
       prismlauncher
     ];
 
   };
   programs = {
     direnv = {
+      # Move
       enable = true;
       nix-direnv.enable = true;
     };
-    btop.enable = true;
+    btop.enable = true; # Move
   };
 }
