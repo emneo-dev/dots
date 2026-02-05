@@ -1,5 +1,5 @@
 { ... }:
-rec {
+{
   programs.fastfetch = {
     enable = true;
 
