@@ -44,6 +44,4 @@
     };
     btop.enable = true;
   };
-
-  services.gpg-agent.pinentry.package = pkgs.pinentry-curses;
 }
