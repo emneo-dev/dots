@@ -7,6 +7,7 @@
     ./git
     ./fastfetch
     ./hyfetch
+    ./tmux
   ];
 
   home = {
@@ -21,7 +22,6 @@
 
     packages = with pkgs; [
       onefetch
-      tmux
       ncdu
       tldr
       tokei
