@@ -6,6 +6,7 @@
     ./bash
     ./git
     ./fastfetch
+    ./hyfetch
   ];
 
   home = {
