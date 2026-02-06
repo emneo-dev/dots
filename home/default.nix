@@ -47,5 +47,6 @@
       nix-direnv.enable = true;
     };
     btop.enable = true; # Move
+    opencode.enable = true;
   };
 }
