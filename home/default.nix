@@ -1,5 +1,7 @@
 { pkgs, username, zen-browser, ... }:
 {
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     ./bash
     ./git
@@ -34,6 +36,7 @@
       gnupg # Move
       vesktop # Move
       prismlauncher
+      jetbrains.idea
     ];
 
   };

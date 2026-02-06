@@ -45,7 +45,7 @@
       ];
 
       home-manager-conf = {
-        useGlobalPkgs = true;
+        useGlobalPkgs = false;
         useUserPackages = true;
         users.${username} = import ./home;
         extraSpecialArgs = {
