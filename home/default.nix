@@ -48,6 +48,7 @@
       gimp
       vlc
       vintagestory
+      ocelot-desktop
     ];
 
   };
