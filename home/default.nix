@@ -52,6 +52,7 @@
       imhex
       ani-cli
       supersonic-wayland
+      blender
     ];
 
   };
