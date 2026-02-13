@@ -63,5 +63,11 @@
     };
     btop.enable = true; # Move
     opencode.enable = true;
+    thunderbird = {
+      enable = true;
+      profiles.main = {
+        isDefault = true;
+      };
+    };
   };
 }
