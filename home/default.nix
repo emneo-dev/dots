@@ -46,6 +46,7 @@
       osu-lazer
       qbittorrent
       gimp
+      vlc
     ];
 
   };
