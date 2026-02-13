@@ -69,5 +69,9 @@
         isDefault = true;
       };
     };
+    lutris = {
+      enable = true;
+      defaultWinePackage = pkgs.proton-ge-bin;
+    };
   };
 }
