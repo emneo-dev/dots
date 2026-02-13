@@ -49,6 +49,7 @@
       vlc
       vintagestory
       ocelot-desktop
+      imhex
     ];
 
   };
