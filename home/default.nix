@@ -44,6 +44,7 @@
       signal-desktop
       solaar
       osu-lazer
+      qbittorrent
     ];
 
   };
