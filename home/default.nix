@@ -47,6 +47,7 @@
       qbittorrent
       gimp
       vlc
+      vintagestory
     ];
 
   };
