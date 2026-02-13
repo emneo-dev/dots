@@ -16,7 +16,7 @@
     homeDirectory = "/home/${username}";
 
     sessionVariables = {
-      EDITOR = "vim";
+      EDITOR = "nvim";
     };
 
     stateVersion = "25.11";
