@@ -43,6 +43,7 @@
       handbrake
       signal-desktop
       solaar
+      osu-lazer
     ];
 
   };
