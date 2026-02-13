@@ -57,6 +57,12 @@
       ani-cli
       supersonic-wayland
       blender
+      (
+        discord.override {
+          withOpenASAR = true;
+          withVencord = true;
+        }
+      )
     ];
 
   };
