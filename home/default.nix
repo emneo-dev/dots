@@ -39,7 +39,6 @@
       ghostty # Move
       zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
       gnupg # Move
-      vesktop # Move
       prismlauncher
       jetbrains.idea
       steam
