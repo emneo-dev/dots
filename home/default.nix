@@ -41,6 +41,7 @@
       steam
       flatpak
       handbrake
+      signal-desktop
     ];
 
   };
