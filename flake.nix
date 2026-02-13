@@ -36,6 +36,7 @@
       pkgs-settings = {
         inherit system;
         config.allowUnfree = true;
+        config.rocmSupport = true;
       };
 
       pkgs = (import nixpkgs pkgs-settings);

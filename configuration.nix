@@ -25,6 +25,8 @@
     };
   };
 
+  hardware.amdgpu.opencl.enable = true;
+
   services.fwupd.enable = true;
 
   users.users.emneo = {
