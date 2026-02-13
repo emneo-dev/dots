@@ -39,6 +39,7 @@
       prismlauncher
       jetbrains.idea
       steam
+      flatpak
     ];
 
   };
