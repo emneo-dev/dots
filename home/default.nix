@@ -38,6 +38,7 @@
       vesktop # Move
       prismlauncher
       jetbrains.idea
+      steam
     ];
 
   };
