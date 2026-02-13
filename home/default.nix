@@ -50,6 +50,7 @@
       vintagestory
       ocelot-desktop
       imhex
+      ani-cli
     ];
 
   };
