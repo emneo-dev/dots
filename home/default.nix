@@ -40,6 +40,7 @@
       jetbrains.idea
       steam
       flatpak
+      handbrake
     ];
 
   };
