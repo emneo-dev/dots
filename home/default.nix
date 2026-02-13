@@ -42,6 +42,7 @@
       flatpak
       handbrake
       signal-desktop
+      solaar
     ];
 
   };
