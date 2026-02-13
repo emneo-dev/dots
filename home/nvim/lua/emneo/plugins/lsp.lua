@@ -103,8 +103,7 @@ return {
           lsp_zero.default_setup,
         }
       }
-      local lspconfig = require('lspconfig')
-      lspconfig.zls.setup {
+      vim.lsp.config('zls', {
         settings = {
           zls = {
             semantic_tokens = "partial",
@@ -115,7 +114,8 @@ return {
             inlay_hints_hide_redundant_param_names_last_token = false,
           }
         }
-      }
+      })
+      vim.lsp.enable('zls')
     end
   },
   {
