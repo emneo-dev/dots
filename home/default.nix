@@ -8,6 +8,7 @@
     ./fastfetch
     ./hyfetch
     ./tmux
+    ./nvim
   ];
 
   home = {
