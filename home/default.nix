@@ -51,6 +51,7 @@
       ocelot-desktop
       imhex
       ani-cli
+      supersonic-wayland
     ];
 
   };
