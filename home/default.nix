@@ -45,6 +45,7 @@
       solaar
       osu-lazer
       qbittorrent
+      gimp
     ];
 
   };
