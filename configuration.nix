@@ -31,7 +31,7 @@
 
   users.users.emneo = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "audio" ];
+    extraGroups = [ "wheel" "audio" "docker" ];
     initialPassword = "kanker";
     packages = with pkgs; [
       tree
@@ -69,6 +69,8 @@
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
   services.sshd.enable = true;
+
+  virtualisation.docker.enable = true;
 
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
