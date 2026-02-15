@@ -64,6 +64,7 @@
       )
       libreoffice
       mediawriter
+      dbeaver-bin
     ];
 
   };
