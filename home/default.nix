@@ -62,6 +62,7 @@
           withVencord = true;
         }
       )
+      libreoffice
     ];
 
   };
