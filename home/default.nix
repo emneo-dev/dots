@@ -54,7 +54,7 @@
       ocelot-desktop
       imhex
       ani-cli
-      supersonic-wayland
+      supersonic
       blender
       (
         discord.override {
