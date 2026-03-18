@@ -67,6 +67,7 @@
       mediawriter
       dbeaver-bin
       protontricks
+      freetype
     ];
 
   };
