@@ -48,19 +48,21 @@
 
   services.fwupd.enable = true;
 
-  users.users.emneo = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "audio" "docker" ];
-    initialPassword = "kanker";
-    packages = with pkgs; [
-      tree
-      vim
-      htop
-      curl
-      git
-      man-pages
-      man-pages-posix
-    ];
+  users.users = {
+    emneo = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" "audio" "docker" "libvirtd" "input" ];
+      initialPassword = "kanker";
+      packages = with pkgs; [
+        tree
+        vim
+        htop
+        curl
+        git
+        man-pages
+        man-pages-posix
+      ];
+    };
   };
 
   services.flatpak.enable = true;
