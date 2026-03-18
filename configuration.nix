@@ -26,6 +26,10 @@
   };
 
   hardware.amdgpu.opencl.enable = true;
+  hardware.logitech.wireless = {
+    enable = true;
+    enableGraphical = true;
+  };
 
   services.fwupd.enable = true;
 
