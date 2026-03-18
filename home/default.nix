@@ -71,6 +71,7 @@
       nerd-fonts.jetbrains-mono
       gnome-tweaks
       openmw
+      davinci-resolve
     ];
 
   };
