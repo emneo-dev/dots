@@ -44,6 +44,8 @@
     ibus.engines = with pkgs.ibus-engines; [ anthy ];
   };
 
+  environment.systemPackages = [ pkgs.libinput pkgs.gtk3 ];
+
   services.fwupd.enable = true;
 
   users.users.emneo = {
