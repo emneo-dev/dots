@@ -47,7 +47,7 @@
       flatpak
       handbrake
       signal-desktop
-      osu-lazer
+      osu-lazer-bin
       qbittorrent
       gimp
       vlc
