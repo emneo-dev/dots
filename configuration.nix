@@ -123,6 +123,7 @@
   services.sshd.enable = true;
 
   virtualisation.docker.enable = true;
+  virtualisation.libvirtd.enable = true;
 
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
@@ -188,6 +189,8 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  programs.virt-manager.enable = true;
 
   # List services that you want to enable:
 
