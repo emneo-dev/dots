@@ -48,6 +48,10 @@
 
   services.fwupd.enable = true;
 
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+
   users.users = {
     emneo = {
       isNormalUser = true;
