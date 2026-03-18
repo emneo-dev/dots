@@ -72,6 +72,7 @@
       gnome-tweaks
       openmw
       davinci-resolve
+      minion
     ];
 
   };
