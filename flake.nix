@@ -20,6 +20,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    jackify = {
+      url = "github:keygenesis/Jackify";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +37,7 @@
     , pre-commit-hooks
     , home-manager
     , zen-browser
+    , jackify
     , nix-gaming
     , ...
     }:
@@ -56,7 +62,7 @@
         useUserPackages = true;
         users.${username} = import ./home;
         extraSpecialArgs = {
-          inherit username system zen-browser nix-gaming;
+          inherit username system zen-browser jackify nix-gaming;
         };
       };
     in
