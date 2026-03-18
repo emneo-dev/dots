@@ -67,6 +67,33 @@
         man-pages-posix
       ];
     };
+
+    sev = {
+      isNormalUser = true;
+      initialPassword = "kanker";
+      packages = with pkgs; [
+        uv
+        b3sum
+        rar
+        rclone
+        aria2
+        apprise
+        croc
+        tmux
+        jq
+        btop
+        htop
+        ncdu
+        sabnzbd
+        bc
+        openssl
+        tinyxxd
+        mediainfo
+      ];
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFHKpgVYo7LkLjbaKhyEDRnsZhMu2NcIrMlkeqC1G0l/"
+      ];
+    };
   };
 
   services.flatpak.enable = true;
