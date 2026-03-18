@@ -31,6 +31,12 @@
     enableGraphical = true;
   };
 
+  environment.etc."libinput/local-overrides.quirks".text = ''
+    [Logitech G502 Lightspeed]
+    MatchUdevType=mouse
+    MatchName=*G502*
+    AttrEventCode=-REL_WHEEL_HI_RES;-REL_HWHEEL_HI_RES
+  '';
   services.fwupd.enable = true;
 
   users.users.emneo = {
