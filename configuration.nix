@@ -37,6 +37,13 @@
     MatchName=*G502*
     AttrEventCode=-REL_WHEEL_HI_RES;-REL_HWHEEL_HI_RES
   '';
+
+  i18n.inputMethod = {
+    enable = true;
+    type = "ibus";
+    ibus.engines = with pkgs.ibus-engines; [ anthy ];
+  };
+
   services.fwupd.enable = true;
 
   users.users.emneo = {
