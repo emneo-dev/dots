@@ -66,6 +66,7 @@
       libreoffice
       mediawriter
       dbeaver-bin
+      protontricks
     ];
 
   };
