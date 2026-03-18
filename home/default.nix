@@ -68,6 +68,7 @@
       dbeaver-bin
       protontricks
       freetype
+      nerd-fonts.jetbrains-mono
     ];
 
   };
