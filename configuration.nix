@@ -117,6 +117,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 15d";
+  };
   networking.networkmanager.enable = true;
   services.sshd.enable = true;
 
