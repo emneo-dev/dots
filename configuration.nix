@@ -102,6 +102,7 @@
   services.desktopManager.gnome.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
+  i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "Europe/Paris";
   networking.hostName = "tachyon";
 
