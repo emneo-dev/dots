@@ -77,6 +77,7 @@
       obsidian
       mullvad-vpn
       anki
+      talosctl
     ];
 
   };
