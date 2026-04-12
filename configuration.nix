@@ -122,6 +122,8 @@
     dates = "weekly";
     options = "--delete-older-than 15d";
   };
+  nix.optimise.automatic = true;
+
   networking.networkmanager.enable = true;
   services.sshd.enable = true;
 
