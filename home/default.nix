@@ -78,6 +78,7 @@
       mullvad-vpn
       anki
       talosctl
+      kubectl
     ];
 
   };
