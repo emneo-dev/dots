@@ -75,6 +75,7 @@
       minion
       llama-cpp-vulkan
       obsidian
+      mullvad-vpn
     ];
 
   };
