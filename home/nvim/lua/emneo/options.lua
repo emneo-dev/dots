@@ -89,3 +89,6 @@ end
 set_cursorline("WinLeave", false)
 set_cursorline("WinEnter", true)
 set_cursorline("FileType", false, "TelescopePrompt")
+
+-- visual selection highlight
+vim.api.nvim_set_hl(0, "Visual", { ctermfg = "white", ctermbg = "blue", bold = true })

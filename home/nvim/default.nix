@@ -21,7 +21,7 @@
   programs.neovim = {
     enable = true;
 
-    extraConfig = (builtins.readFile ./.vimrc);
+    initLua = ''require("emneo")'';
     plugins = [ pkgs.vimPlugins.lazy-nvim ];
 
     extraPackages = with pkgs; [
