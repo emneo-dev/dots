@@ -2,7 +2,53 @@
 {
   programs.tmux = {
     enable = true;
+    mouse = true;
+    baseIndex = 1;
+    keyMode = "vi";
+    terminal = "xterm-256color";
 
-    extraConfig = (builtins.readFile ./tmux.conf);
+    extraConfig = ''
+      set -g status-keys vi
+      set -g status-right '%H:%M'
+      set -g window-status-format '#W'
+      set -g window-status-current-format '#W'
+      set -g window-status-current-style 'fg=yellow'
+      set -g pane-border-style 'fg=black'
+      set -g pane-active-border-style 'fg=yellow'
+      set -g pane-border-lines 'simple'
+      set -g clock-mode-colour 'yellow'
+      set -g message-style 'fg=yellow'
+      set -g renumber-windows on
+
+      set -g status-style "bg=default fg=#555555"
+
+      # make colors inside tmux look the same as outside of tmux
+      set -ga terminal-overrides ",xterm-256color:Tc"
+
+      # copy-mode vi bindings
+      unbind -T copy-mode-vi v
+      bind -T copy-mode-vi 'v' send -X begin-selection
+      bind -T copy-mode-vi 'C-v' send -X rectangle-toggle
+      bind -T copy-mode-vi 'y' send -X copy-selection
+
+      # moving windows
+      bind -r H swap-window -d -t -1
+      bind -r L swap-window -d -t +1
+
+      # open new windows in same directory
+      bind '"' split-window -c "#{pane_current_path}"
+      bind % split-window -h -c "#{pane_current_path}"
+      bind c new-window -c "#{pane_current_path}"
+
+      # move around windows with hjkl
+      bind -r h select-pane -L
+      bind -r j select-pane -D
+      bind -r k select-pane -U
+      bind -r l select-pane -R
+
+      # reload config
+      bind R source-file "~/.config/tmux/tmux.conf" \; \
+        display-message "source-file done"
+    '';
   };
 }
