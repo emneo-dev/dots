@@ -67,6 +67,8 @@
       protontricks
       freetype
       nerd-fonts.jetbrains-mono
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
       gnome-tweaks
       openmw
       davinci-resolve
