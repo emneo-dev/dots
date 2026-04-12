@@ -73,6 +73,7 @@
       openmw
       davinci-resolve
       minion
+      llama-cpp-vulkan
     ];
 
   };
