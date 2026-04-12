@@ -80,6 +80,7 @@
       talosctl
       kubectl
       kubernetes-helm
+      obs-studio
     ];
 
   };
