@@ -83,6 +83,7 @@
       obs-studio
       ladybird
       twitch-tui
+      gh
     ];
 
   };
