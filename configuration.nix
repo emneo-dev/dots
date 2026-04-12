@@ -36,6 +36,12 @@
 
   environment.systemPackages = [ pkgs.libinput pkgs.gtk3 ];
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+  ];
+
   services = {
     fwupd.enable = true;
     mullvad-vpn.enable = true;
