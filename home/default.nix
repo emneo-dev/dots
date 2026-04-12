@@ -85,6 +85,7 @@
     };
     btop.enable = true; # Move
     opencode.enable = true;
+    claude-code.enable = true;
     thunderbird = {
       enable = true;
       profiles.main = {
