@@ -58,15 +58,6 @@
       isNormalUser = true;
       extraGroups = [ "wheel" "audio" "docker" "libvirtd" "input" ];
       initialPassword = "kanker";
-      packages = with pkgs; [
-        tree
-        vim
-        htop
-        curl
-        git
-        man-pages
-        man-pages-posix
-      ];
     };
 
     sev = {

@@ -10,6 +10,11 @@
     zip
     unzip
     ffmpeg
+    tree
+    vim
+    curl
+    man-pages
+    man-pages-posix
   ];
 
   programs = {
@@ -18,6 +23,7 @@
       nix-direnv.enable = true;
     };
     btop.enable = true;
+    htop.enable = true;
     ripgrep.enable = true;
   };
 }
