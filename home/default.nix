@@ -1,4 +1,4 @@
-{ pkgs, username, zen-browser, jackify, nix-gaming, ... }:
+{ pkgs, username, zen-browser, ... }:
 {
   nixpkgs.config = {
     allowUnfree = true;
@@ -38,8 +38,6 @@
       ffmpeg
       ghostty # Move
       zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-      jackify.packages.${pkgs.stdenv.hostPlatform.system}.default
-      nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.mo2installer
       gnupg # Move
       prismlauncher
       jetbrains.idea
