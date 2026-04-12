@@ -76,6 +76,7 @@
       llama-cpp-vulkan
       obsidian
       mullvad-vpn
+      anki
     ];
 
   };
