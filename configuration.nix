@@ -158,7 +158,10 @@
 
   programs.virt-manager.enable = true;
 
-  networking.firewall.enable = false;
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 22 8080 ];
+  };
 
   system.stateVersion = "25.11";
 }
