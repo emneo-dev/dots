@@ -20,6 +20,8 @@
 
   programs.neovim = {
     enable = true;
+    withRuby = false;
+    withPython3 = false;
 
     initLua = ''require("emneo")'';
     plugins = [ pkgs.vimPlugins.lazy-nvim ];
