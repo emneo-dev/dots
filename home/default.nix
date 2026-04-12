@@ -79,6 +79,7 @@
       anki
       talosctl
       kubectl
+      kubernetes-helm
     ];
 
   };
