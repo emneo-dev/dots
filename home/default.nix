@@ -81,6 +81,7 @@
       kubectl
       kubernetes-helm
       obs-studio
+      ladybird
     ];
 
   };
