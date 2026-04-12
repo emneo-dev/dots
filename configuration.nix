@@ -99,6 +99,7 @@
     };
   };
 
+
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
@@ -119,11 +120,12 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # networking.hostName = "nixos"; # Define your hostname.
-
-  # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
   services.sshd.enable = true;
+
+  networking.hosts = {
+    "192.168.100.193" = [ "kbox.local" "traefik.kbox.local" "longhorn.kbox.local" "whoami.kbox.local" ];
+  };
 
   virtualisation.docker.enable = true;
   virtualisation.libvirtd.enable = true;
