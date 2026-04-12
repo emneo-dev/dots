@@ -82,6 +82,7 @@
       kubernetes-helm
       obs-studio
       ladybird
+      twitch-tui
     ];
 
   };
