@@ -3,11 +3,12 @@
   home.packages = with pkgs; [
     vlc
     handbrake
-    obs-studio
     supersonic
     ani-cli
     gimp
     blender
     davinci-resolve
   ];
+
+  programs.obs-studio.enable = true;
 }

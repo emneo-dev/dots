@@ -1,7 +1,6 @@
 { pkgs, zen-browser, ... }:
 {
   home.packages = with pkgs; [
-    ghostty
     zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ladybird
     gnome-tweaks
@@ -9,9 +8,13 @@
     flatpak
     freetype
     mullvad-vpn
-    obsidian
-    anki
     libreoffice
     qbittorrent
   ];
+
+  programs = {
+    ghostty.enable = true;
+    obsidian.enable = true;
+    anki.enable = true;
+  };
 }

@@ -5,7 +5,6 @@
     ncdu
     tldr
     tokei
-    ripgrep
     rclone
     file
     zip
@@ -19,5 +18,6 @@
       nix-direnv.enable = true;
     };
     btop.enable = true;
+    ripgrep.enable = true;
   };
 }

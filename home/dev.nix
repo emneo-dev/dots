@@ -3,7 +3,6 @@
   home.packages = with pkgs; [
     dbeaver-bin
     imhex
-    gh
     jetbrains.idea
     talosctl
     kubectl
@@ -12,6 +11,7 @@
   ];
 
   programs = {
+    gh.enable = true;
     opencode.enable = true;
     claude-code.enable = true;
   };
