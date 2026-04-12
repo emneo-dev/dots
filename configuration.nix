@@ -46,7 +46,10 @@
 
   environment.systemPackages = [ pkgs.libinput pkgs.gtk3 ];
 
-  services.fwupd.enable = true;
+  services = {
+    fwupd.enable = true;
+    mullvad-vpn.enable = true;
+  };
 
   nixpkgs.config = {
     allowUnfree = true;
