@@ -9,7 +9,6 @@ rec {
       . ${home.file.bashrc.source}
       . ${home.file.aliases.source}
       . ${home.file.env.source}
-      . ${home.file.epitech.source}
       . ${home.file.path.source}
 
       set -o history
@@ -28,10 +27,6 @@ rec {
     env = {
       source = ./env.sh;
       target = ".config/bash/env.sh";
-    };
-    epitech = {
-      source = ./epitech.sh;
-      target = ".config/bash/epitech.sh";
     };
     path = {
       source = ./path.sh;
