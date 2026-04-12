@@ -6,6 +6,7 @@
     ./fastfetch
     ./hyfetch
     ./tmux
+    ./ghostty
     ./nvim
     ./cli.nix
     ./desktop.nix
