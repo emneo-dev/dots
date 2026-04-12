@@ -31,12 +31,6 @@ return {
     end,
   },
 
-  {
-    'williamboman/mason.nvim',
-    lazy = false,
-    config = true,
-  },
-
   -- autocompletion
   {
     'hrsh7th/nvim-cmp',
@@ -73,11 +67,10 @@ return {
   -- LSP
   {
     'neovim/nvim-lspconfig',
-    cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
+    cmd = { 'LspInfo', 'LspStart' },
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       { 'hrsh7th/cmp-nvim-lsp' },
-      { 'williamboman/mason-lspconfig.nvim' },
     },
     config = function()
       -- this is where all the LSP shenanigans will live
@@ -98,11 +91,11 @@ return {
       lsp_zero.format_mapping('=', format_opts)
       lsp_zero.format_on_save(format_opts)
 
-      require('mason-lspconfig').setup {
-        handlers = {
-          lsp_zero.default_setup,
-        }
-      }
+      vim.lsp.config('efm', {
+        filetypes = { 'json', 'markdown', 'css', 'javascript', 'typescript', 'svelte', 'html', 'yaml' },
+      })
+      vim.lsp.enable({'nil_ls', 'lua_ls', 'pyright', 'clangd', 'rust_analyzer', 'hls', 'efm'})
+
       vim.lsp.config('zls', {
         settings = {
           zls = {

@@ -32,6 +32,7 @@
       pyright
       clang-tools
       llvmPackages_latest.clang
+      efm-langserver
       nodejs
       xclip
       zls
