@@ -23,17 +23,17 @@
     packages = with pkgs; [
       onefetch
       ncdu
-      tldr # Move
+      tldr
       tokei
-      ripgrep # Move?
-      rclone # Move?
+      ripgrep
+      rclone
       file
       zip
       unzip
       ffmpeg
-      ghostty # Move
+      ghostty
       zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-      gnupg # Move
+      gnupg
       prismlauncher
       jetbrains.idea
       steam
@@ -84,11 +84,10 @@
   };
   programs = {
     direnv = {
-      # Move
       enable = true;
       nix-direnv.enable = true;
     };
-    btop.enable = true; # Move
+    btop.enable = true;
     opencode.enable = true;
     claude-code.enable = true;
     thunderbird = {
