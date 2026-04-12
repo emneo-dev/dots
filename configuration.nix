@@ -130,6 +130,22 @@
   virtualisation.docker.enable = true;
   virtualisation.libvirtd.enable = true;
 
+  services.pipewire.extraConfig.pipewire."99-voice-changer-sink" = {
+    "context.objects" = [
+      {
+        factory = "adapter";
+        args = {
+          "factory.name" = "support.null-audio-sink";
+          "node.name" = "VoiceChangerSink";
+          "node.description" = "Voice Changer Virtual Sink";
+          "media.class" = "Audio/Sink";
+          "audio.channels" = 2;
+          "audio.position" = [ "FL" "FR" ];
+        };
+      }
+    ];
+  };
+
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
 
