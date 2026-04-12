@@ -1,10 +1,5 @@
 { pkgs, username, zen-browser, ... }:
 {
-  nixpkgs.config = {
-    allowUnfree = true;
-    rocmSupport = true;
-  };
-
   imports = [
     ./bash
     ./git
