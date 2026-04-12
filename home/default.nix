@@ -33,7 +33,6 @@
       ffmpeg
       ghostty
       zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-      gnupg
       prismlauncher
       jetbrains.idea
       steam
