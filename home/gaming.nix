@@ -11,8 +11,8 @@
     minion
   ];
 
-  programs.lutris = {
-    enable = true;
-    defaultWinePackage = pkgs.proton-ge-bin;
-  };
+  # programs.lutris = {
+  #   enable = true;
+  #   defaultWinePackage = pkgs.proton-ge-bin;
+  # };
 }
